@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+
+option go_package="genproto/marketing_service";
+
+
+service MarketingService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

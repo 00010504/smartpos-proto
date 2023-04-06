@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package="genproto/inventory_service";
+
+
+service InventoryService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

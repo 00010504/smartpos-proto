@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package="genproto/catalog_service";
+
+
+service CatalogService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+    string data=1;
+}

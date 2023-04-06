@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+
+option go_package="genproto/payment_service";
+
+
+service PaymentService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

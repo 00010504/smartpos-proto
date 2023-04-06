@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+
+option go_package="genproto/order_service";
+
+
+service OrderService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

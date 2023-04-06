@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+
+option go_package="genproto/auth_service";
+
+service AuthService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

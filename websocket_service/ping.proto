@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+
+option go_package="genproto/websocket_service";
+
+
+service WebsocketService {
+    rpc Ping (PingPong) returns (PingPong);
+}
+
+message PingPong {
+
+}

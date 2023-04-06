@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option go_package="genproto/validation_service";
+
+
+service ImportService {
+    rpc CreateImport (CreateImportReq) returns (CreateImportRes);
+}
+
+message CreateImportReq {
+    string name = 1;
+    string store = 2;
+    string url = 3;
+    bool generate_barcode = 4;
+    bool generate_sku = 5;
+    string type = 6;
+    repeated ItemProperties import_properties = 7;
+	int32  quantity = 8;
+	int32 total = 9;
+	string status = 10;
+	string date = 11;
+	string created_by = 12;
+	string completed_by = 13;
+}
+
+
+message CreateImportRes {
+    string message=1;
+}
+
+message ItemProperties {
+    string id = 1;
+    string field_name = 2;
+    bool is_attribute = 3;
+    bool is_characteristics = 4;
+    bool is_new = 5;
+    bool is_uploadable = 6;
+    int32 sequence_number =7;
+}

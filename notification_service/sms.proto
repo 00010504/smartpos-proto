@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package="genproto/notification_service";
+
+
+service SMS {
+    rpc SendSms(SendSmsRequest) returns (SendSmsRespone);
+}
+
+message SendSmsRequest {
+    string phoneNumber=1;
+    string message=2;
+}
+
+message SendSmsRespone {
+}
